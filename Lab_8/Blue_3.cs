@@ -6,7 +6,6 @@ namespace Lab_8;
 
 public class Blue_3 : Blue
 {
-    private string _garbage;
     private (char, double)[] _output;
     public (char, double)[] Output{
         get
