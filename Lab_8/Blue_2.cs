@@ -22,14 +22,15 @@ public class Blue_2 : Blue
         foreach (string word in words){
             if (word.Contains(_garbage))
             {
-                // string removeWord = word + " ";
-                resultLine = _output.Replace(word + " ", "");
+                char[] characters = word.ToCharArray();
+                string tempChar = Convert.ToString(characters[characters.Length - 1]);
+                if (tempChar == "." || tempChar == "," || tempChar == ";") resultLine = _output.Replace(" " + word, "" + tempChar);
+                else resultLine = _output.Replace(word + " ", "");
                 _output = resultLine;
             }
         }
         _output = _output.Replace("  ", "");
         _output = _output.Trim();
-
     }
     
     public string ToString()
