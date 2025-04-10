@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "adHoRV8+KWA=",
+  "success": true,
+  "projectFilePath": "/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/Lab_8.csproj",
+  "expectedPackageFiles": [
+    "/Users/valeriy/.nuget/packages/microsoft.dotnet.ilcompiler/8.0.8/microsoft.dotnet.ilcompiler.8.0.8.nupkg.sha512",
+    "/Users/valeriy/.nuget/packages/microsoft.net.illink.tasks/8.0.8/microsoft.net.illink.tasks.8.0.8.nupkg.sha512",
+    "/Users/valeriy/.nuget/packages/runtime.osx-arm64.microsoft.dotnet.ilcompiler/8.0.8/runtime.osx-arm64.microsoft.dotnet.ilcompiler.8.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

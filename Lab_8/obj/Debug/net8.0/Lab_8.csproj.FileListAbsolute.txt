@@ -1,0 +1,15 @@
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/bin/Debug/net8.0/Lab_8
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/bin/Debug/net8.0/Lab_8.deps.json
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/bin/Debug/net8.0/Lab_8.runtimeconfig.json
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/bin/Debug/net8.0/Lab_8.dll
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/bin/Debug/net8.0/Lab_8.pdb
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.GeneratedMSBuildEditorConfig.editorconfig
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.AssemblyInfoInputs.cache
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.AssemblyInfo.cs
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.csproj.CoreCompileInputs.cache
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.sourcelink.json
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.dll
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/refint/Lab_8.dll
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.pdb
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/Lab_8.genruntimeconfig.cache
+/Users/valeriy/Desktop/BIVT-2024-Lab-8/Lab_8/obj/Debug/net8.0/ref/Lab_8.dll
