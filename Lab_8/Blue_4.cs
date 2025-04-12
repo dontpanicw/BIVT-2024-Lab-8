@@ -41,7 +41,7 @@ public class Blue_4 : Blue
         _output = sum;
     }
 
-    public string ToString()
+    public override string ToString()
     {
         string result = "" + _output;
         return result;

@@ -8,11 +8,16 @@ public class Blue_1 : Blue
     public string[] Output => _output;
 
     public Blue_1(string input) : base(input){
-        _output = new string[0];
+        _output = null;
     }
 
     public override void Review()
     {
+        if (Input == null)
+        {
+            _output = null;
+            return;
+        }
         string[] words = Input.Split(' ');
         string currentLine = "";
         string[] temp = new string[0];
@@ -41,14 +46,16 @@ public class Blue_1 : Blue
         _output = temp;
     }
     
-    public string ToString()
+    public override string ToString()
     {
         if (_output == null) return null;
-
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < _output.Length; i++)
         {
-            sb.AppendLine(_output[i]);
+            if (i < _output.Length - 1)
+                sb.AppendLine(_output[i]);
+            else
+                sb.Append(_output[i]); // последняя строка — без перевода строки
         }
         return sb.ToString();
     }

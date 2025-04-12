@@ -87,7 +87,7 @@ public class Blue_3 : Blue
 
     }
     
-    public string ToString()
+    public override string ToString()
     {
         string result = "";
         foreach ((char, double) pair in Output)

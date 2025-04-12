@@ -33,7 +33,7 @@ public class Blue_2 : Blue
         _output = _output.Trim();
     }
     
-    public string ToString()
+    public override string ToString()
     {
         return _output;
     }
