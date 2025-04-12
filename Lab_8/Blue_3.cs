@@ -89,10 +89,15 @@ public class Blue_3 : Blue
     
     public override string ToString()
     {
+        if (_output == null || _output.Length == 0) return null;
         string result = "";
-        foreach ((char, double) pair in Output)
+        for (int i = 0; i < Output.Length; i++)
         {
-            result += pair.Item1 + " - " + pair.Item2 + "\n";
+            if (i == Output.Length - 1){
+                result += _output[i].Item1 + " - " + _output[i].Item2;
+                break;
+            }
+            result += _output[i].Item1 + " - " + _output[i].Item2 + "\n";
         }
         return result;
     }
