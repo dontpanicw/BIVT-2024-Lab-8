@@ -40,11 +40,12 @@ public class Blue_3 : Blue
     }
 
     public Blue_3(string input) : base(input){
-        _output = new (char, double)[0];
+        _output = null;
     }
 
     public override void Review()
     {
+        if (Input == null) return;
         (char, double)[] temp = new (char, double)[0];
         char[] firstChars = new char[0];
         int counterChars = 0;
@@ -94,10 +95,10 @@ public class Blue_3 : Blue
         for (int i = 0; i < Output.Length; i++)
         {
             if (i == Output.Length - 1){
-                result += _output[i].Item1 + " - " + _output[i].Item2;
+                result += Output[i].Item1 + " - " + Output[i].Item2;
                 break;
             }
-            result += _output[i].Item1 + " - " + _output[i].Item2 + "\n";
+            result += Output[i].Item1 + " - " + Output[i].Item2 + "\n";
         }
         return result;
     }
