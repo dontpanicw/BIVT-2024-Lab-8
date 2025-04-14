@@ -45,7 +45,7 @@ public class Blue_3 : Blue
 
     public override void Review()
     {
-        if (Input == null) return;
+        if (string.IsNullOrWhiteSpace(Input)) return;
         (char, double)[] temp = new (char, double)[0];
         char[] firstChars = new char[0];
         int counterChars = 0;
@@ -88,19 +88,38 @@ public class Blue_3 : Blue
 
     }
     
+    // public override string ToString()
+    // {
+    //     if (_output == null || _output.Length == 0) return null;
+    //     string result = "";
+    //     for (int i = 0; i < Output.Length; i++)
+    //     {
+    //         if (i == Output.Length - 1){
+    //             result += Output[i].Item1 + " - " + Output[i].Item2;
+    //             break;
+    //         }
+    //         result += Output[i].Item1 + " - " + Output[i].Item2 + "\n";
+    //     }
+    //     return result;
+    // }
     public override string ToString()
     {
         if (_output == null || _output.Length == 0) return null;
-        string result = "";
+        StringBuilder result = new StringBuilder();
+        
         for (int i = 0; i < Output.Length; i++)
         {
-            if (i == Output.Length - 1){
-                result += Output[i].Item1 + " - " + Output[i].Item2;
-                break;
+            result.Append(Output[i].Item1);
+            result.Append(" - ");
+            result.Append(Output[i].Item2);
+            
+            if (i != Output.Length - 1)
+            {
+                result.Append(Environment.NewLine);
             }
-            result += Output[i].Item1 + " - " + Output[i].Item2 + "\n";
         }
-        return result;
+
+        return result.ToString();
     }
 }
 
