@@ -1,6 +1,7 @@
 using System.Dynamic;
 using System.Text;
 using System.Xml.XPath;
+using System.Text.RegularExpressions;
 
 namespace Lab_8;
 
@@ -10,6 +11,7 @@ public class Blue_3 : Blue
     public (char, double)[] Output{
         get
         {
+            if (_output == null) return null;
             (char, double)[] result = new (char, double)[_output.Length];
             _output.CopyTo(result, 0);
 
@@ -50,7 +52,33 @@ public class Blue_3 : Blue
         char[] firstChars = new char[0];
         int counterChars = 0;
 
-        string result = Input.Replace(" –", "");
+        string cleaned = Input.Replace("\"", "").Replace("'", "");
+        string cleanedStr = Regex.Replace(cleaned, @"\b[0-9\(\)\[\]\{\}\""][^\s]*", "").Replace("  ", " ").Trim();
+
+        // string[] words = Input.Split(new[] { ' ' });
+
+        // StringBuilder cleaned = new StringBuilder();
+
+        // foreach (var word in words)
+        // {
+        //     if (word.Length == 0) continue;
+
+        //     char firstChar = word[0];
+            
+        //     if (char.IsDigit(firstChar) || firstChar == '(' || firstChar == ')' || 
+        //         firstChar == '[' || firstChar == ']' || firstChar == '{' || firstChar == '}')
+        //     {
+        //         continue; // пропускаем слово
+        //     }
+
+        //     cleaned.Append(word + " ");
+        // }
+
+        // string result = cleaned.ToString().Trim();
+
+        //System.Console.WriteLine(cleanedStr);
+
+        string result = cleanedStr.Replace(" –", "");
         string[] words = result.Split(' ');
         for(int i = 0; i < words.Length; i++)
         {
@@ -111,7 +139,7 @@ public class Blue_3 : Blue
         {
             result.Append(Output[i].Item1);
             result.Append(" - ");
-            result.Append(Output[i].Item2);
+            result.Append(Output[i].Item2.ToString("F4"));
             
             if (i != Output.Length - 1)
             {
