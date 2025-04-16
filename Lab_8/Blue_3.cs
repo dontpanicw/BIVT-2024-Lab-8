@@ -87,11 +87,16 @@ public class Blue_3 : Blue
 
         foreach (string word in words)
         {
+            int charIndex = 0;
             char[] characters = word.ToCharArray();
-            if (firstChars.Contains(characters[0])){
+            if (characters[0].ToString() == "(")
+            {
+                charIndex = 1;
+            }
+            if (firstChars.Contains(characters[charIndex])){
                 for (int i = 0; i < temp.Length; i++)
                 {
-                    if (temp[i].Item1 == characters[0])
+                    if (temp[i].Item1 == characters[charIndex])
                     {
                         temp[i] = (temp[i].Item1, temp[i].Item2 + 1);
                     }
@@ -100,9 +105,9 @@ public class Blue_3 : Blue
             }
             else{
                 Array.Resize(ref firstChars, firstChars.Length + 1);
-                firstChars[firstChars.Length - 1] = characters[0];
+                firstChars[firstChars.Length - 1] = characters[charIndex];
                 Array.Resize(ref temp, temp.Length + 1);
-                temp[temp.Length - 1] = (characters[0], 1);
+                temp[temp.Length - 1] = (characters[charIndex], 1);
                 counterChars++;
             }
         }
